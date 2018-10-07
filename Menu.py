@@ -13,7 +13,7 @@ while ans:
 
     2. Info sheet
 
-    3. End
+    3. Deposit calculator
     
     Please select and option: """)
 
@@ -34,10 +34,27 @@ while ans:
         gdpr = input ("Are we able to collect some information about you?: ")
 
         if gdpr == "yes":
+
             name = input ("What is your name: ")
-            if len(name) > 3:
+            if len(name) < 3:
                 print("Please enter more than 3 characters")
+
+            else:
+                age = input("How old are you? ")
+
+                height = input ("How tall are you in inches? ")
+
+                weight = input ("How much do you weigh in pounds? ")
+
+                eye = input ("What is your eye color? ")
+
+                Hair = input ("What color is your hair? ")
 
 
     elif menu == "3":
-        sys.exit
+        annual_salary = input ("Please enter your current annaul salary: ")
+        portion_saved = input ("Please enter how much you would like to be saved, as a decimal: ")
+        total_cost = input ("Please enter the cost of your dream home: ")
+
+        months = annual_salary /portion_saved
+        print (float(months))
